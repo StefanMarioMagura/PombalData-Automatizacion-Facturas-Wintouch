@@ -1,37 +1,44 @@
-Proyecto 3: Automatización de Facturas para Wintouch 🧾🤖
+# Proyecto 3: Automatización de Facturas para Wintouch 🧾🤖
+
 Este proyecto automatiza la extracción de datos de facturas en formato PDF y su envío a la plataforma Wintouch Cloud a través de su API REST. Está pensado para facilitar la gestión documental y administrativa de empresas, eliminando procesos manuales y mejorando la eficiencia.
 
-🔍 Descripción
-Se procesa un PDF con facturas ubicado en la carpeta de la empresa correspondiente.
+---
 
-Se extraen los datos clave (cliente, importe, fecha, conceptos, etc.).
+## 🔍 Descripción
 
-Se genera y envía una petición POST a la API de Wintouch con esos datos para registrar la factura.
+- Se procesa un PDF con facturas ubicado en la carpeta de la empresa correspondiente.  
+- Se extraen los datos clave (cliente, importe, fecha, conceptos, etc.).  
+- Se genera y envía una petición POST a la API de Wintouch con esos datos para registrar la factura.  
+- El proyecto está modularizado en varios archivos para facilitar mantenimiento y escalabilidad.
 
-El proyecto está modularizado en varios archivos para facilitar mantenimiento y escalabilidad.
+---
 
-📂 Estructura del repositorio
-plaintext
+## 📂 Estructura del repositorio
+
+Wintouch_automatizacion/
+├── main.py ← Orquesta el flujo completo del programa
+├── config.py ← Configuración general, URL base de la API
+├── enviar_api.py ← Funciones para enviar datos a la API REST
+├── lector_pdf.py ← Extrae datos de las facturas del PDF
+├── requirements.txt ← Dependencias necesarias para el proyecto
+├── README.md ← Documentación y guía del proyecto
+├── empresas/
+│ └── empresa1.json ← Configuración específica de la empresa
+├── pdfs/
+│ └── empresa1/
+│ └── Factura_PombalData_Teste.pdf ← PDF de prueba para la empresa
+
+yaml
 Copiar
 Editar
-Wintouch_automatizacion/
-├── main.py                  ← Orquesta el flujo completo del programa
-├── config.py                ← Configuración general, URL base de la API
-├── enviar_api.py            ← Funciones para enviar datos a la API REST
-├── lector_pdf.py            ← Extrae datos de las facturas del PDF
-├── requirements.txt         ← Dependencias necesarias para el proyecto
-├── README.md                ← Documentación y guía del proyecto
-├── empresas/
-│   └── empresa1.json        ← Configuración específica de la empresa
-├── pdfs/
-│   └── empresa1/
-│       └── Factura_PombalData_Teste.pdf  ← PDF de prueba para la empresa
-🚀 Cómo ejecutar
+
+---
+
+## 🚀 Cómo ejecutar
+
 Para ejecutar el proyecto, abre una terminal en la raíz del repositorio y lanza:
 
-bash
-Copiar
-Editar
+```bash
 python main.py --empresa empresa1
 La opción --empresa indica la carpeta y configuración que se utilizará (por ejemplo empresa1).
 
@@ -55,6 +62,7 @@ empresas/empresa1.json: Archivo JSON con datos específicos para la empresa, com
 pdfs/empresa1/: Carpeta donde se almacenan los PDFs a procesar por empresa.
 
 ⚠️ Notas importantes
+
 Nunca subir claves API reales a repositorios públicos. Usa .gitignore para evitar que archivos con credenciales se suban.
 
 La estructura de las carpetas debe mantenerse para que el programa funcione correctamente.
