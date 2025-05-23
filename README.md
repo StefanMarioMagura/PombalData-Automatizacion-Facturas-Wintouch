@@ -48,37 +48,48 @@ Se toma la configuración desde empresas/empresa1.json.
 
 Se procesa la factura y se envía a la API.
 
-🧩 Explicación de archivos clave
-main.py: Controla el flujo completo, llamando a la función que lee el PDF, procesa los datos y llama al módulo para enviar la petición a Wintouch.
+### 🧩 Explicación de archivos clave
 
-config.py: Define variables globales como la URL base de la API de Wintouch para fácil mantenimiento.
+- **main.py:**  
+  Controla el flujo completo, llamando a la función que lee el PDF, procesa los datos y llama al módulo para enviar la petición a Wintouch.
 
-enviar_api.py: Contiene funciones que generan y envían las peticiones HTTP hacia la API, gestionando respuestas y errores.
+- **config.py:**  
+  Define variables globales como la URL base de la API de Wintouch para fácil mantenimiento.
 
-lector_pdf.py: Encargado de abrir el PDF, extraer los datos necesarios y devolverlos en formato estructurado para su envío.
+- **enviar_api.py:**  
+  Contiene funciones que generan y envían las peticiones HTTP hacia la API, gestionando respuestas y errores.
 
-empresas/empresa1.json: Archivo JSON con datos específicos para la empresa, como EnterpriseID, DocumentTypeID, EntityID, y claves API (no subir datos reales en repositorios públicos).
+- **lector_pdf.py:**  
+  Encargado de abrir el PDF, extraer los datos necesarios y devolverlos en formato estructurado para su envío.
 
-pdfs/empresa1/: Carpeta donde se almacenan los PDFs a procesar por empresa.
+- **empresas/empresa1.json:**  
+  Archivo JSON con datos específicos para la empresa, como EnterpriseID, DocumentTypeID, EntityID, y claves API (**no subir datos reales en repositorios públicos**).
 
-⚠️ Notas importantes
-Nunca subir claves API reales a repositorios públicos. Usa .gitignore para evitar que archivos con credenciales se suban.
+- **pdfs/empresa1/:**  
+  Carpeta donde se almacenan los PDFs a procesar por empresa.
 
-La estructura de las carpetas debe mantenerse para que el programa funcione correctamente.
+---
 
-Puedes añadir más configuraciones para otras empresas creando más archivos JSON dentro de empresas/ y carpetas correspondientes en pdfs/.
+### ⚠️ Notas importantes
 
-El proyecto está preparado para ser escalable y adaptable a otros tipos de documentos.
+- Nunca subir claves API reales a repositorios públicos. Usa `.gitignore` para evitar que archivos con credenciales se suban.
+- La estructura de las carpetas debe mantenerse para que el programa funcione correctamente.
+- Puedes añadir más configuraciones para otras empresas creando más archivos JSON dentro de `empresas/` y carpetas correspondientes en `pdfs/`.
+- El proyecto está preparado para ser escalable y adaptable a otros tipos de documentos.
 
-🧰 Tecnologías usadas
-Python 🐍
+---
 
-Librerías para procesamiento PDF (PyPDF2, pdfplumber, etc.)
+### 🧰 Tecnologías usadas
 
-Requests para consumo de API REST
+- Python 🐍
+- Librerías para procesamiento PDF (PyPDF2, pdfplumber, etc.)
+- Requests para consumo de API REST
+- JSON para manejo de configuraciones
 
-JSON para manejo de configuraciones
+---
 
-📬 Autor
+### 📬 Autor
+
 Stefan Mario Magura – GitHub
+
 
