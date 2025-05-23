@@ -115,10 +115,16 @@ Si tienes una configuración en empresas/cliente_uno.json y sus PDFs en pdfs/cli
 Bash
 
 python main.py --empresa cliente_uno
-⚠️ Puntos Importantes
+
+---
+
+## ⚠️ Puntos Importantes
 Seguridad de Credenciales: Nunca incluyas información sensible como tokens de API directamente en el código fuente que subes a repositorios públicos. Utiliza los archivos de configuración JSON (asegurándote de que estén en .gitignore si contienen datos reales y no plantillas) o variables de entorno.
 Estructura de Carpetas: Mantener la estructura de directorios definida es crucial para el funcionamiento del script.
 Adaptabilidad: Para nuevas empresas, simplemente replica la estructura de configuración (.json) y la carpeta de PDFs.
-👨‍💻 Autor
+
+---
+
+## 👨‍💻 Autor
 Stefan Mario Magura
-GitHub: [@tu-usuario-de-github](https://github.com/tu-usuario-de-github) (¡No olvides reemplazar esto con tu enlace de perfil real!)
+
