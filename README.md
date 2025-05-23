@@ -4,8 +4,7 @@ Este proyecto automatiza la extracción de datos de facturas en formato PDF y su
 Está pensado para facilitar la gestión documental y administrativa de empresas, eliminando procesos manuales y mejorando la eficiencia.
 
 ---
-
-## 🔍 Descripción
+🔍 Descripción
 
 - Se procesa un PDF con facturas ubicado en la carpeta de la empresa correspondiente.
 - Se extraen los datos clave (cliente, importe, fecha, conceptos, etc.).
@@ -14,7 +13,7 @@ Está pensado para facilitar la gestión documental y administrativa de empresas
 
 ---
 
-## 🚀 Cómo ejecutar
+ 🚀 Cómo ejecutar
 
 Para ejecutar el proyecto, abre una terminal en la raíz del repositorio y lanza:
 
