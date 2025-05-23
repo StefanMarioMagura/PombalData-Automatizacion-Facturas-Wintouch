@@ -44,7 +44,7 @@ Se toma la configuración desde empresas/empresa1.json.
 
 Se procesa la factura y se envía a la API.
 
-🧩 Explicación de archivos clave
+## 🧩 Explicación de archivos clave
 main.py: Controla el flujo completo, llamando a la función que lee el PDF, procesa los datos y llama al módulo para enviar la petición a Wintouch.
 
 config.py: Define variables globales como la URL base de la API de Wintouch para fácil mantenimiento.
@@ -57,7 +57,7 @@ empresas/empresa1.json: Archivo JSON con datos específicos para la empresa, com
 
 pdfs/empresa1/: Carpeta donde se almacenan los PDFs a procesar por empresa.
 
-⚠️ Notas importantes
+## ⚠️ Notas importantes
 Nunca subir claves API reales a repositorios públicos. Usa .gitignore para evitar que archivos con credenciales se suban.
 
 La estructura de las carpetas debe mantenerse para que el programa funcione correctamente.
@@ -66,7 +66,7 @@ Puedes añadir más configuraciones para otras empresas creando más archivos JS
 
 El proyecto está preparado para ser escalable y adaptable a otros tipos de documentos.
 
-🧰 Tecnologías usadas
+## 🧰 Tecnologías usadas
 Python 🐍
 
 Librerías para procesamiento PDF (PyPDF2, pdfplumber, etc.)
