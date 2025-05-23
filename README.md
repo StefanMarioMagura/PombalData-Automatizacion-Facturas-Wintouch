@@ -1,63 +1,58 @@
-# Proyecto 3: Automatización de Facturas para Wintouch 🧾🤖
+# 📂 Proyecto Automatización Facturas Wintouch
 
-Este proyecto automatiza la extracción de datos de facturas en PDF y su envío a la plataforma Wintouch Cloud vía API REST.  
-Facilita la gestión documental y administrativa, eliminando procesos manuales y mejorando la eficiencia.
-
----
-
-## 🔍 Descripción
-
-- Procesa PDFs de facturas ubicados en carpetas específicas por empresa.
-- Extrae datos clave: cliente, importe, fecha, conceptos, etc.
-- Genera y envía peticiones POST a la API de Wintouch para registrar facturas.
-- Modular y escalable, preparado para múltiples empresas y tipos de documentos.
+Automatiza la lectura de facturas en PDF y el envío de datos a la plataforma Wintouch Cloud mediante su API REST. Ideal para gestionar facturación de forma rápida y sin errores manuales.
 
 ---
 
-## 🚀 Cómo ejecutar
+## ⚙️ ¿Qué hace este proyecto?
 
-Abre una terminal en la raíz del repositorio y ejecuta:
+- Lee PDFs con facturas en carpetas específicas por empresa.
+- Extrae los datos esenciales (cliente, importe, fecha, conceptos).
+- Envía esos datos a Wintouch usando peticiones HTTP.
+- Soporta múltiples empresas con configuraciones independientes.
+- Modular y extensible para otros tipos de documentos.
+
+---
+
+## 🚀 Instrucciones de uso
+
+1. Clona o descarga este repositorio.
+2. Coloca tus PDFs en la carpeta `pdfs/empresaX/` (crea la carpeta con el nombre de tu empresa).
+3. Configura los parámetros de la empresa en `empresas/empresaX.json`.
+4. Ejecuta el siguiente comando, cambiando `empresaX` por el nombre de tu empresa:
 
 ```bash
-python main.py --empresa empresa1
-Donde:
+python main.py --empresa empresaX
+🗂 Estructura principal de archivos
+Archivo / Carpeta	Función principal
+main.py	Orquesta el proceso completo: lee PDF y envía datos a Wintouch
+config.py	Variables globales, URLs y configuraciones generales
+lector_pdf.py	Extrae y procesa datos de los PDFs
+enviar_api.py	Gestiona las peticiones HTTP hacia la API y sus respuestas
+empresas/empresaX.json	Datos específicos de la empresa (IDs, API keys, etc.)
+pdfs/empresaX/	Lugar donde se guardan los PDFs para cada empresa
 
---empresa empresa1: Indica la configuración y carpeta de la empresa a usar.
+🔧 Requisitos y tecnologías
+Python 3.x
 
-Se lee el PDF en pdfs/empresa1/.
+Librerías: PyPDF2 o pdfplumber para PDFs
 
-La configuración se toma desde empresas/empresa1.json.
+requests para comunicaciones HTTP
 
-La factura se procesa y envía automáticamente a la API.
+Archivos JSON para configuraciones
 
-📁 Archivos clave
-Archivo	Descripción
-main.py	Controla el flujo principal: lee PDF, procesa datos y envía la petición a Wintouch.
-config.py	Variables globales como URL base de la API para fácil mantenimiento.
-enviar_api.py	Funciones que crean y envían peticiones HTTP, gestionando respuestas y errores.
-lector_pdf.py	Extrae datos estructurados de facturas a partir de PDFs.
-empresas/empresa1.json	Configuración específica por empresa (EnterpriseID, DocumentTypeID, EntityID, API Keys).
-pdfs/empresa1/	Carpeta donde se almacenan los PDFs a procesar para cada empresa.
-README.md	Documentación del proyecto.
+Puedes instalar las dependencias con:
 
-🧠 Tecnologías usadas
-Python 🐍
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+⚠️ Consideraciones importantes
+No subir datos sensibles: nunca publiques claves API o credenciales reales en repositorios públicos. Usa .gitignore.
 
-Librerías para procesamiento de PDFs (PyPDF2, pdfplumber, etc.)
+Mantén la estructura de carpetas para que el código funcione correctamente.
 
-Requests para consumo de API REST
+Para añadir nuevas empresas, crea sus carpetas y archivos JSON de configuración.
 
-JSON para configuraciones
-
-⚠️ Notas importantes
-Nunca subir claves API reales a repositorios públicos. Usa .gitignore para evitarlo.
-
-Mantén la estructura de carpetas para que el programa funcione correctamente.
-
-Para añadir empresas, crea archivos JSON nuevos en empresas/ y carpetas de PDFs en pdfs/.
-
-El proyecto está pensado para ser escalable y adaptable a distintos documentos y clientes.
-
-📬 Autor
+👨‍💻 Autor
 Stefan Mario Magura – GitHub
-
