@@ -75,3 +75,5 @@ JSON para manejo de configuraciones
 📬 Autor
 Stefan Mario Magura – GitHub
 
+
+
