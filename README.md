@@ -6,19 +6,19 @@ Automatiza la lectura de facturas en PDF y el envío de datos a la plataforma Wi
 
 ## ⚙️ ¿Qué hace este proyecto?
 
-- Lee PDFs con facturas en carpetas específicas por empresa.
-- Extrae los datos esenciales (cliente, importe, fecha, conceptos).
-- Envía esos datos a Wintouch usando peticiones HTTP.
-- Soporta múltiples empresas con configuraciones independientes.
+- Lee PDFs con facturas en carpetas específicas por empresa.  
+- Extrae los datos esenciales (cliente, importe, fecha, conceptos).  
+- Envía esos datos a Wintouch usando peticiones HTTP.  
+- Soporta múltiples empresas con configuraciones independientes.  
 - Modular y extensible para otros tipos de documentos.
 
 ---
 
 ## 🚀 Instrucciones de uso
 
-1. Clona o descarga este repositorio.
-2. Coloca tus PDFs en la carpeta `pdfs/empresaX/` (crea la carpeta con el nombre de tu empresa).
-3. Configura los parámetros de la empresa en `empresas/empresaX.json`.
+1. Clona o descarga este repositorio.  
+2. Coloca tus PDFs en la carpeta `pdfs/empresaX/` (crea la carpeta con el nombre de tu empresa).  
+3. Configura los parámetros de la empresa en `empresas/empresaX.json`.  
 4. Ejecuta el siguiente comando, cambiando `empresaX` por el nombre de tu empresa:
 
 ```bash
