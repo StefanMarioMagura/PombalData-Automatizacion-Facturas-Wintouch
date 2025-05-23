@@ -1,6 +1,7 @@
 # Proyecto 3: Automatización de Facturas para Wintouch 🧾🤖
 
-Este proyecto automatiza la extracción de datos de facturas en formato PDF y su envío a la plataforma Wintouch Cloud a través de su API REST. Está pensado para facilitar la gestión documental y administrativa de empresas, eliminando procesos manuales y mejorando la eficiencia.
+Este proyecto automatiza la extracción de datos de facturas en formato PDF y su envío a la plataforma Wintouch Cloud a través de su API REST.  
+Está pensado para facilitar la gestión documental y administrativa de empresas, eliminando procesos manuales y mejorando la eficiencia.
 
 ---
 
@@ -15,32 +16,27 @@ Este proyecto automatiza la extracción de datos de facturas en formato PDF y su
 
 ## 📂 Estructura del repositorio
 
+```plaintext
 Wintouch_automatizacion/
-├── main.py ← Orquesta el flujo completo del programa
-├── config.py ← Configuración general, URL base de la API
-├── enviar_api.py ← Funciones para enviar datos a la API REST
-├── lector_pdf.py ← Extrae datos de las facturas del PDF
-├── requirements.txt ← Dependencias necesarias para el proyecto
-├── README.md ← Documentación y guía del proyecto
+├── main.py                  ← Orquesta el flujo completo del programa
+├── config.py                ← Configuración general, URL base de la API
+├── enviar_api.py            ← Funciones para enviar datos a la API REST
+├── lector_pdf.py            ← Extrae datos de las facturas del PDF
+├── requirements.txt         ← Dependencias necesarias para el proyecto
+├── README.md                ← Documentación y guía del proyecto
 ├── empresas/
-│ └── empresa1.json ← Configuración específica de la empresa
+│   └── empresa1.json        ← Configuración específica de la empresa
 ├── pdfs/
-│ └── empresa1/
-│ └── Factura_PombalData_Teste.pdf ← PDF de prueba para la empresa
-
-yaml
-Copiar
-Editar
-
----
-
-## 🚀 Cómo ejecutar
-
+│   └── empresa1/
+│       └── Factura_PombalData_Teste.pdf  ← PDF de prueba para la empresa
+🚀 Cómo ejecutar
 Para ejecutar el proyecto, abre una terminal en la raíz del repositorio y lanza:
 
-```bash
+bash
+Copiar
+Editar
 python main.py --empresa empresa1
-La opción --empresa indica la carpeta y configuración que se utilizará (por ejemplo, empresa1).
+La opción --empresa indica la carpeta y configuración que se utilizará (por ejemplo empresa1).
 
 Se lee el PDF en pdfs/empresa1/.
 
@@ -48,48 +44,42 @@ Se toma la configuración desde empresas/empresa1.json.
 
 Se procesa la factura y se envía a la API.
 
-### 🧩 Explicación de archivos clave
+🧩 Explicación de archivos clave
+main.py: Controla el flujo completo, llamando a la función que lee el PDF, procesa los datos y llama al módulo para enviar la petición a Wintouch.
 
-- **main.py:**  
-  Controla el flujo completo, llamando a la función que lee el PDF, procesa los datos y llama al módulo para enviar la petición a Wintouch.
+config.py: Define variables globales como la URL base de la API de Wintouch para fácil mantenimiento.
 
-- **config.py:**  
-  Define variables globales como la URL base de la API de Wintouch para fácil mantenimiento.
+enviar_api.py: Contiene funciones que generan y envían las peticiones HTTP hacia la API, gestionando respuestas y errores.
 
-- **enviar_api.py:**  
-  Contiene funciones que generan y envían las peticiones HTTP hacia la API, gestionando respuestas y errores.
+lector_pdf.py: Encargado de abrir el PDF, extraer los datos necesarios y devolverlos en formato estructurado para su envío.
 
-- **lector_pdf.py:**  
-  Encargado de abrir el PDF, extraer los datos necesarios y devolverlos en formato estructurado para su envío.
+empresas/empresa1.json: Archivo JSON con datos específicos para la empresa, como EnterpriseID, DocumentTypeID, EntityID, y claves API (no subir datos reales en repositorios públicos).
 
-- **empresas/empresa1.json:**  
-  Archivo JSON con datos específicos para la empresa, como EnterpriseID, DocumentTypeID, EntityID, y claves API (**no subir datos reales en repositorios públicos**).
+pdfs/empresa1/: Carpeta donde se almacenan los PDFs a procesar por empresa.
 
-- **pdfs/empresa1/:**  
-  Carpeta donde se almacenan los PDFs a procesar por empresa.
+⚠️ Notas importantes
+Nunca subir claves API reales a repositorios públicos. Usa .gitignore para evitar que archivos con credenciales se suban.
 
----
+La estructura de las carpetas debe mantenerse para que el programa funcione correctamente.
 
-### ⚠️ Notas importantes
+Puedes añadir más configuraciones para otras empresas creando más archivos JSON dentro de empresas/ y carpetas correspondientes en pdfs/.
 
-- Nunca subir claves API reales a repositorios públicos. Usa `.gitignore` para evitar que archivos con credenciales se suban.
-- La estructura de las carpetas debe mantenerse para que el programa funcione correctamente.
-- Puedes añadir más configuraciones para otras empresas creando más archivos JSON dentro de `empresas/` y carpetas correspondientes en `pdfs/`.
-- El proyecto está preparado para ser escalable y adaptable a otros tipos de documentos.
+El proyecto está preparado para ser escalable y adaptable a otros tipos de documentos.
 
----
+🧰 Tecnologías usadas
+Python 🐍
 
-### 🧰 Tecnologías usadas
+Librerías para procesamiento PDF (PyPDF2, pdfplumber, etc.)
 
-- Python 🐍
-- Librerías para procesamiento PDF (PyPDF2, pdfplumber, etc.)
-- Requests para consumo de API REST
-- JSON para manejo de configuraciones
+Requests para consumo de API REST
 
----
+JSON para manejo de configuraciones
 
-### 📬 Autor
-
+📬 Autor
 Stefan Mario Magura – GitHub
+
+yaml
+Copiar
+Editar
 
 
