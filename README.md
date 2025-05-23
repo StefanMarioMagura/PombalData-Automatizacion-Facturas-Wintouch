@@ -23,7 +23,10 @@ Automatiza la lectura de facturas en PDF y el envío de datos a la plataforma Wi
 
 ```bash
 python main.py --empresa empresaX
-🗂 Estructura principal de archivos
+
+---
+
+## 🗂 Estructura principal de archivos
 Archivo / Carpeta	Función principal
 main.py	Orquesta el proceso completo: lee PDF y envía datos a Wintouch
 config.py	Variables globales, URLs y configuraciones generales
@@ -32,7 +35,7 @@ enviar_api.py	Gestiona las peticiones HTTP hacia la API y sus respuestas
 empresas/empresaX.json	Datos específicos de la empresa (IDs, API keys, etc.)
 pdfs/empresaX/	Lugar donde se guardan los PDFs para cada empresa
 
-🔧 Requisitos y tecnologías
+## 🔧 Requisitos y tecnologías
 Python 3.x
 
 Librerías: PyPDF2 o pdfplumber para PDFs
@@ -47,7 +50,10 @@ bash
 Copiar
 Editar
 pip install -r requirements.txt
-⚠️ Consideraciones importantes
+
+---
+
+## ⚠️ Consideraciones importantes
 No subir datos sensibles: nunca publiques claves API o credenciales reales en repositorios públicos. Usa .gitignore.
 
 Mantén la estructura de carpetas para que el código funcione correctamente.
